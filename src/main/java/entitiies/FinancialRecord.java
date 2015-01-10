@@ -33,7 +33,7 @@ public class FinancialRecord implements Serializable {
     @Column(name = "transactionId")
     private Integer transactionId;
     @Column(name = "ccNumbeer")
-    private Integer ccNumbeer;
+    private String ccNumbeer;
     @Column(name = "vendorId")
     private Integer vendorId;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
@@ -53,7 +53,7 @@ public class FinancialRecord implements Serializable {
         return id; 
     }
 
-    public FinancialRecord(Integer transactionId, Integer ccNumbeer, Integer vendorId, Float totalAmount, Float profit, Float profitToMycompany, Float amountToVendor, Date dateOfTransaction) {
+    public FinancialRecord(Integer transactionId, String ccNumbeer, Integer vendorId, Float totalAmount, Float profit, Float profitToMycompany, Float amountToVendor, Date dateOfTransaction) {
         this.transactionId = transactionId;
         this.ccNumbeer = ccNumbeer;
         this.vendorId = vendorId;
@@ -75,11 +75,11 @@ public class FinancialRecord implements Serializable {
         this.transactionId = transactionId;
     }
 
-    public Integer getCcNumbeer() {
+    public String getCcNumbeer() {
         return ccNumbeer;
     }
 
-    public void setCcNumbeer(Integer ccNumbeer) {
+    public void setCcNumbeer(String ccNumbeer) {
         this.ccNumbeer = ccNumbeer;
     }
 

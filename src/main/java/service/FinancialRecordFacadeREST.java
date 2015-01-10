@@ -48,7 +48,7 @@ public class FinancialRecordFacadeREST extends AbstractFacade<FinancialRecord> {
      @Path("save")
     @Consumes({"application/xml", "application/json"})
     public void saveFinancialRecord(@QueryParam("transactionId") int transactionId,
-                            @QueryParam("ccNumbeer") int ccNumbeer,
+                            @QueryParam("ccNumbeer") String ccNumbeer,
                             @QueryParam("vendorId") int vendorId,
                             @QueryParam("totalAmount") float totalAmount,
                            // @QueryParam("totalAmount") float totalAmount,
